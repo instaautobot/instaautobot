@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaAutoBot | Instagram DM Automation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0f1c;
+      color: #f1f5f9;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background: #111827;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 {
+      color: #60a5fa;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #60a5fa;
+    }
+    header {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background-image: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 15, 28, 0.85);
+      z-index: 1;
+    }
+    header .logo-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      max-width: 220px;
+      display: block;
+      margin: 0 auto 1.5rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #e2e8f0;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #60a5fa;
+    }
+    .features-grid, .pricing-plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .feature, .plan {
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .feature h3, .plan h3 {
+      color: #38bdf8;
+      margin-bottom: 0.75rem;
+    }
+    .feature p, .plan ul {
+      color: #cbd5e1;
+    }
+    .plan .price {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+      text-align: left;
+    }
+    .plan ul li {
+      margin-bottom: 0.5rem;
+    }
+    .plan button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact input,
+    .contact textarea {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: none;
+      background: #1e293b;
+      color: #f1f5f9;
+      font-size: 1rem;
+    }
+    .contact button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>InstaAutoBot</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="InstaAutoBot Logo">
+    </div>
+    <p>Automate your Instagram DMs with AI. Boost engagement, save time, and grow effortlessly.</p>
+  </header>
+
+  <section id="features">
+    <h2>Why Choose InstaAutoBot?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>🚀 Instant Replies</h3>
+        <p>Auto-respond to DMs 24/7, even while you're asleep or busy.</p>
+      </div>
+      <div class="feature">
+        <h3>🧠 Smart AI Responses</h3>
+        <p>Trained AI answers questions about your services, pricing, and availability.</p>
+      </div>
+      <div class="feature">
+        <h3>📅 Booking Integration</h3>
+        <p>Sync with booking tools to auto-confirm appointments and consultations.</p>
+      </div>
+      <div class="feature">
+        <h3>📊 Analytics Dashboard</h3>
+        <p>Track engagement, conversions, and response performance with ease.</p>
+      </div>
+      <div class="feature">
+        <h3>🔒 Secure & Compliant</h3>
+        <p>Connect safely via Meta and Stripe. GDPR-compliant by default.</p>
+      </div>
+      <div class="feature">
+        <h3>⚙️ Easy Setup</h3>
+        <p>No coding required. Connect and go live in minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing-plans">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p class="price">Free</p>
+        <ul>
+          <li>✓ 50 DMs per month</li>
+          <li>✓ Basic automation</li>
+          <li>✓ Support via email</li>
+        </ul>
+        <button onclick="window.location.href='/signup.html'">Start Free</button>
+      </div>
+      <div class="plan">
+        <h3>Pro</h3>
+        <p class="price">€15/mo</p>
+        <ul>
+          <li>✓ 1000 DMs/month</li>
+          <li>✓ Advanced AI replies</li>
+          <li>✓ Integration with Meta</li>
+        </ul>
+        <button onclick="window.location.href='https://buy.stripe.com/test_28obLF4706VRfde288'">Select</button>
+      </div>
+      <div class="plan">
+        <h3>Elite</h3>
+        <p class="price">$29/mo</p>
+        <ul>
+          <li>✓ Unlimited DMs</li>
+          <li>✓ Priority AI training</li>
+          <li>✓ Premium support</li>
+        </ul>
+        <button onclick="window.location.href='https://buy.stripe.com/test_4gwaHBdHAgwr7KMaEF'">Select</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:support@instaautobot.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 InstaAutoBot. Built with ❤️ for creators.
+  </footer>
+</body>
+</html>
